@@ -1,0 +1,193 @@
+
+   .form-control{
+   	color: inherit;
+   	@include secondary-text();
+   }
+   .form-control:focus{
+   	color: inherit;
+   	@include secondary-text();
+   }
+
+/* Comment Form */
+.comment-form-input label{
+    position:absolute;
+    top:0;
+    left:0;
+	@include secondary-text();
+	@include transition( all .25s ease-in-out );
+    font-size:18px;
+    font-weight:normal;
+    pointer-events:none;
+}
+.comment-form-author label,
+.comment-form-email label{
+    margin-left: 15px;
+}
+.comment-form-input input:focus ~ label, .comment-form-input input:valid ~ label,
+.comment-form-input textarea:focus ~ label, .comment-form-input textarea:valid ~ label {
+    top: calc(100% - 2px);
+	opacity: 1;
+    padding: 2px 8px;
+    background-color: #6c757d;
+    font-size: 75%;
+    color: #fff;
+}
+#respond .form-control, input[type=text], input[type=search], textarea {
+    border-width: 0 0 2px 0;
+    border-style: none none solid none;
+    border-color: #bbb;
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+	background: transparent;
+}
+/* Search Modal Form */
+#search-form-input-small:focus + #search-form-button,
+#search-form-input-navbar:focus + #search-form-button-navbar{
+    border: 2px solid #6c757d;
+}
+
+#search-form-button-navbar,
+#search-form-button{
+    position: relative;
+    z-index: 2;
+    border-width: 2px;
+    border-color: #bbb;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: .25rem .75rem;
+    font-size: 1rem;
+}
+#search-form-input-navbar,
+#search-form-input-small{
+    margin-right: 1px;
+	background: transparent;
+}
+
+
+#search-form-input-navbar-small::placeholder,
+#search-form-input-small::placeholder {
+  font-size: 16px;
+}
+
+input[type=search]:focus,
+input[type=text]:focus {
+  @include box-shadow( none );
+}
+
+@media all and (min-width: 576px){
+  #search-form-input-navbar,
+  #search-form-input-small {
+    font-size: 1.2rem;
+  }
+
+  .navbar-search-form {
+    padding: .8rem 0;
+  }
+
+  .navbar-search-form .wrap {
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #search-form-input-navbar,
+  #search-form-input-small {
+    font-size: 1.3rem;
+  }
+
+  .navbar-search-form {
+    padding: 1.2rem 0;
+  }
+
+  .navbar-search-form .wrap {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  #search-form-input-navbar,
+  #search-form-input-small {
+    font-size: 1.4rem;
+  }
+
+  .navbar-search-form {
+    padding: 1.4rem 0;
+  }
+
+  .navbar-search-form .wrap {
+    width: 70%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  #search-form-input-navbar,
+  #search-form-input-small {
+    font-size: 1.5rem;
+  }
+
+  .navbar-search-form {
+    padding: 2rem 0;
+  }
+
+  .navbar-search-form .wrap {
+    width: 60%;
+  }
+}
+
+/* Homepage Search Form & Section */
+#home-search{
+	padding-top: calc( 14% + 24px );
+	padding-right: 12%;
+	padding-bottom: 14%;
+	padding-left: 12%;
+}
+
+@media only screen and (min-width: 768px) {
+	#home-search{
+		padding-top: calc( 8% + 24px );
+		padding-right: 22%;
+		padding-bottom: 8%;
+		padding-left: 22%;
+	}
+}
+#home-search .custom-control-input:not(:disabled):active~.custom-control-label::before{
+	border-color: inherit;
+	background: transparent;
+}
+#home-search .custom-control-input:checked~.custom-control-label::before{
+	border-color: inherit;
+	background-color: inherit;
+}
+#home-search .custom-control-input:focus~.custom-control-label::before{
+	@include box-shadow( none );
+}
+#home-search .custom-control-label::before{
+	@include transition( all .25s ease-in-out );
+	border-width: 2px;
+	background: transparent;
+}
+#home-search #search-form-input-small:focus + #search-form-button{
+	border-color: inherit;
+}
+#home-search .form-control{
+	color: inherit;
+}
+#home-search #search-form-button{
+	border-color: inherit;
+	color: inherit;
+}
+#home-search #search-form-input-small{
+	border-color: inherit;
+	padding: .25rem;
+	background: transparent;
+	color: inherit;
+}
+
+#home-search .module-header{
+	color: inherit;
+}
+
+#home-search .search-form-radio-buttons{
+	text-align: left;
+}

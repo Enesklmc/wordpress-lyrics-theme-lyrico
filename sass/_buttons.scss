@@ -1,0 +1,77 @@
+.btn{
+	font-weight: 600;
+}
+.slider-nav-icon{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.lyrico-load-more{
+    display: block;
+    opacity: .6;
+    @include transition( all .25s ease-in-out );
+    margin-top: 1rem;
+    height: 120px;
+    font-size: 1.5rem;
+    &:hover,
+    &:focus,
+    &.loading{
+        opacity: 1;
+        @include box-shadow( none );
+
+    }
+
+    &.loading{
+        cursor: default;
+    }
+
+    span.load-more-text{
+        display: block;
+    }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.spin{
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+/* Go Top Button */
+#go-top-button {
+    position: fixed;
+    z-index: 1000;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+    @include transition( background-color .3s ease-in-out );
+    margin: 5px;
+    @include box-shadow( 0 0 1px 2px #343a40 );
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+}
+
+#go-top-button > i {
+    font-size: 1.5em;
+    line-height: 50px;
+    color: #eee;
+}

@@ -1,0 +1,174 @@
+.only-text-media .media-border,
+.thumbnail-lyrics-media .media-border {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .12;
+	border: 1px solid currentColor;
+    border-radius: 4px;
+	width: 100%;
+	height: 100%;
+}
+
+.thumbnail-lyrics-media.has-thumbnail .media-border,
+.thumbnail-lyrics-media.has-thumbnail .stretched-link::after{
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.thumbnail-lyrics-media.has-thumbnail img{
+	z-index: 0;
+}
+.lyrics-media{
+    position: relative;
+}
+.lyrics-media .media-body{
+    overflow: hidden;
+    line-height: 1.375;
+}
+.thumbnail-lyrics-media .media-body{
+	padding-left: .75rem;
+	padding-right: .75rem;
+}
+.lyrics-media .media-content{
+    overflow: hidden;
+}
+.thumbnail-lyrics-media{
+    border-radius: .25rem;
+    height: $thumbnail-lyrics-media-height;
+}
+.thumbnail-lyrics-media .media-body{
+    height: $thumbnail-lyrics-media-height;
+}
+.thumbnail-lyrics-media.lyrics-media a{
+	color: inherit;
+	text-decoration: none;
+}
+.thumbnail-lyrics-media img{
+    width: $thumbnail-lyrics-media-height;
+    height: $thumbnail-lyrics-media-height;
+}
+@media only screen and (min-width: 768px) {
+    .thumbnail-lyrics-media img{
+        width: $thumbnail-lyrics-media-height + 10px;
+        height: $thumbnail-lyrics-media-height + 10px;
+    }
+    .thumbnail-lyrics-media,
+    .thumbnail-lyrics-media .media-body {
+        height: $thumbnail-lyrics-media-height + 10px;
+    }
+}
+
+.thumbnail-lyrics-media .stretched-link::after{
+	opacity: .25;
+	@include transition( box-shadow 0.15s ease-in-out);
+	border-radius: .25rem;
+}
+
+.thumbnail-lyrics-media .stretched-link:hover::after,
+.thumbnail-lyrics-media .stretched-link:focus::after{
+	@include box-shadow(0 0 5px currentColor);
+}
+.primary-media-title {
+    display: block;
+    overflow: hidden;
+    @include transition( color .25s ease-in-out );
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.widget-content-lyrico_playlist .primary-media-title,
+.only-text-media .primary-media-title,
+.widget-content-lyrico_artist .primary-media-title{
+    white-space: normal;
+}
+.secondary-media-title{
+    display: block;
+	@include secondary-text();
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+}
+
+@media only screen and (min-width: 768px) {
+	#secondary-div .lyrico-posts-widget .thumbnail-lyrics-media img{
+		width: $thumbnail-lyrics-media-height - 20px;
+		height: $thumbnail-lyrics-media-height - 20px;
+	}
+
+	#secondary-div .lyrico-posts-widget .lyrics-media .secondary-media-title{
+		font-size: 14px;
+	}
+    #secondary-div .lyrico-posts-widget .thumbnail-lyrics-media,
+    #secondary-div .lyrico-posts-widget .thumbnail-lyrics-media .media-body {
+        height: $thumbnail-lyrics-media-height - 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+	#secondary-div .lyrico-posts-widget .thumbnail-lyrics-media img{
+		width: $thumbnail-lyrics-media-height;
+		height: $thumbnail-lyrics-media-height;
+	}
+
+	#secondary-div .lyrico-posts-widget .lyrics-media .secondary-media-title{
+		font-size: 16px;
+	}
+    #secondary-div .lyrico-posts-widget .thumbnail-lyrics-media,
+    #secondary-div .lyrico-posts-widget .thumbnail-lyrics-media .media-body {
+        height: $thumbnail-lyrics-media-height;
+    }
+}
+
+.order-box {
+	@include flexbox();
+	@include align-self(center);
+	@include align-items(center);
+	@include justify-content(center);
+    border: 2px solid currentColor;
+    border-radius: 3px;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+}
+
+.order-box-number {
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Other Songs From the Album */
+.ordered-lyrics-media{
+    @include box-shadow( none );
+    border: none;
+}
+
+.other-songs-from-the-album-list{
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+}
+body.modular-design .other-songs-from-the-album-list{
+    padding-bottom: 1rem;
+}
+.other-songs-from-the-album-list li{
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+.other-songs-from-the-album-header{
+    border: 1px solid #ddd;
+    border-top-right-radius: .25rem;
+    border-top-left-radius: .25rem;
+    background-color: #eee;
+}
+
+.other-songs-from-the-album-header a{
+    font-size:1.3rem;
+}

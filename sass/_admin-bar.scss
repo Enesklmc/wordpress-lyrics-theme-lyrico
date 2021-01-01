@@ -1,0 +1,39 @@
+body.logged-in .lyrics-song{
+    display: inline;
+}
+
+body.logged-in .single-header-container .edit-link,
+body.logged-in .page-header-container .edit-link{
+    content: "\f464";
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    right: 5px;
+    opacity: .8;
+    margin: 5px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+body.logged-in.admin-bar.fixed-navbar-top #site-navigation{
+	margin-top: 46px;
+}
+
+@media screen and (min-width: 782px){
+	body.logged-in.admin-bar.fixed-navbar-top #site-navigation{
+		margin-top: 32px;
+	}
+}
+body.logged-in .post-edit-link{
+	font-weight: 600;
+}
+
+body.logged-in.admin-bar .modal-dialog{
+	margin-top: 3rem;
+}
+
+@media screen and (min-width: 576px){
+	body.logged-in.admin-bar .modal-dialog{
+		margin-top: 4rem;
+	}
+}

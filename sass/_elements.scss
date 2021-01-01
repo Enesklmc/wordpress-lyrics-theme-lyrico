@@ -1,0 +1,18 @@
+body{
+	background-color: #dcdcdc;
+}
+
+a{
+    color: inherit;
+}
+a:hover {
+    color: inherit;
+}
+.stretched-link{
+    @include transition( all .25s ease-in-out );
+}
+
+hr{
+	border-color: currentColor;
+    opacity: .15;
+}

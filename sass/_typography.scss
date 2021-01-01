@@ -1,0 +1,118 @@
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+	font-weight: inherit;
+}
+
+body {
+	font-size: 100%;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+/*
+A More Modern Scale for Web Typography
+Jason Pamental https://typecast.com/blog/a-more-modern-scale-for-web-typography
+*/
+h1, .h1 {
+  font-size: 2em;
+  line-height: 1.25;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+  h1, .h1 {
+    font-size: 2.5em;
+    line-height: 1.125;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h1, .h1 {
+    font-size: 3em;
+    line-height: 1.05;
+  }
+}
+
+h2, .h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+  h2, .h2 {
+    font-size: 2em;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h2, .h2 {
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+}
+
+h3, .h3 {
+  font-size: 1.275em;
+  line-height: 1.13636364;
+}
+
+@media only screen and (min-width: 768px) {
+  h3, .h3 {
+    font-size: 1.4em;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h3, .h3 {
+    font-size: 1.65em;
+    line-height: 1.25;
+  }
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.11111111;
+}
+
+@media only screen and (min-width: 768px) {
+  h4 {
+    line-height: 1.22222222;
+  }
+}
+
+h5{
+    font-size: 1em;
+}
+
+h6{
+    font-size: 0.83em;
+}
+
+blockquote {
+  hyphens: auto;
+  word-break: break-word;
+}
+
+.lyrico-text-secondary{
+	@include secondary-text();
+}
+
+.wp-caption-text {
+  @include secondary-text();
+  font-size: .8rem;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-copyright-text{
+	font-size: 12px;
+}
+
+.genre-card a {
+	text-decoration: none;
+}

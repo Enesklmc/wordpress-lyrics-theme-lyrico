@@ -1,0 +1,162 @@
+.clearfix{
+    overflow: auto;
+}
+.artist-picture{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: right;
+}
+/* Style the tab */
+.tab {
+    float: left;
+    width: 22%;
+    padding: 0;
+}
+
+.tab > li{
+    margin: 0;
+}
+/* Style the buttons that are used to open the tab content */
+.tab > li a{
+    display: block;
+    background-color: inherit;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Change background color of buttons on hover */
+.tab > li a:hover {
+    background-color: #eee;
+}
+
+.tab > li a:focus {
+    box-shadow: none;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    box-shadow: none;
+    color: #008080;
+    text-decoration: none;
+    font-weight: 600;
+    border-right: 4px solid #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding-bottom: 22px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(78% - 26px);
+    border-left: none;
+    min-height: 400px;
+    border-left: 1px solid #ccc;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#lyrics-meta-boxes > .inside {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+ .tabcontent > .content-header {
+    color: #444;
+    font-size: 24px;
+    border-bottom: 3px solid #eee;
+    padding: 12px 0 16px;
+    display: block;
+    font-weight: 400;
+    margin: .75rem 0 1.25rem;
+}
+
+.menu-icon-lyrico_lyrics{
+    border-top: 1px solid #777;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: transparent;
+
+}
+
+/* width */
+.tabcontent::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.tabcontent::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.tabcontent::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.tabcontent::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button.components-color-palette__item[aria-label="Color: Midnight Gradient"]::before {
+    content: "G";
+    /* z-index: 55; */
+    color: #888;
+}
+.tabcontent label[for = "lyrico_artist"]::before{
+    font-family: "dashicons";
+    content: "\f110";
+}
+.tabcontent label[for = "lyrico_other_artists"]::before{
+    font-family: "dashicons";
+    content: "\f307";
+}
+.tabcontent label[for = "lyrico_album"]::before{
+    font-family: "dashicons";
+    content: "\f514";
+}
+.tabcontent label[for = "lyrico_order_in_album"]::before{
+    font-family: "dashicons";
+    content: "\f204";
+}
+.tabcontent label[for = "lyrico_artist"]::before,
+.tabcontent label[for = "lyrico_other_artists"]::before,
+.tabcontent label[for = "lyrico_album"]::before,
+.tabcontent label[for = "lyrico_order_in_album"]::before {
+    font-size: 24px;
+    margin-right: 6px;
+    line-height: 0;
+    vertical-align: middle;
+    opacity: .9;
+    font-weight: 400;
+}
+
+.meta-box-description {
+    padding: 5px 0;
+    font-size: 13px;
+    color:#6c757d;
+}
+.tabcontent table tr
+/* Gutenber Clear Meta Box */
+.edit-post-layout__metaboxes:not(:empty){
+    background-color: #f1f1f1;
+}
+.edit-post-layout__metaboxes:not(:empty) .edit-post-meta-boxes-area{
+    margin: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.24);
+}

@@ -1,0 +1,205 @@
+.lyrico-gradient-portrait .custom-radio .custom-control-input:checked~.custom-control-label::after,
+.lyrico-gradient-limade .custom-radio .custom-control-input:checked~.custom-control-label::after,
+.lyrico-gradient-mango .custom-radio .custom-control-input:checked~.custom-control-label::after,
+.lyrico-gradient-roseanna .custom-radio .custom-control-input:checked~.custom-control-label::after,
+.lyrico-gradient-delicate .custom-radio .custom-control-input:checked~.custom-control-label::after,
+.lyrico-gradient-mild .custom-radio .custom-control-input:checked~.custom-control-label::after{
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23000'/%3e%3c/svg%3e");
+}
+.lyrico-gradient-portrait #home-search .custom-control-input:checked ~ .custom-control-label::before,
+.lyrico-gradient-limade #home-search .custom-control-input:checked ~ .custom-control-label::before,
+.lyrico-gradient-mango #home-search .custom-control-input:checked ~ .custom-control-label::before,
+.lyrico-gradient-roseanna #home-search .custom-control-input:checked ~ .custom-control-label::before,
+.lyrico-gradient-delicate #home-search .custom-control-input:checked ~ .custom-control-label::before,
+.lyrico-gradient-mild #home-search .custom-control-input:checked ~ .custom-control-label::before {
+	border-color: #333;
+}
+
+.lyrico-gradient-portrait .lyrico-header-post-type,
+.lyrico-gradient-limade .lyrico-header-post-type,
+.lyrico-gradient-mango .lyrico-header-post-type,
+.lyrico-gradient-roseanna .lyrico-header-post-type,
+.lyrico-gradient-delicate .lyrico-header-post-type,
+.lyrico-gradient-mild .lyrico-header-post-type {
+	background: rgba(255, 255, 255, 0.75);
+}
+
+.lyrico-gradient-midnight-city, .has-gradient-midnight-background-color {
+    /* https://uigradients.com/#MidnightCity */
+    background: #232526;
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);
+    background: linear-gradient(to bottom, #414345, #232526);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-mild {
+    /* https://uigradients.com/#Mild */
+    background: #67b26f;
+    background: -webkit-linear-gradient(to top, #67b26f, #4ca2cd);
+    background: linear-gradient(to top, #67b26f, #4ca2cd);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    color: #222;
+}
+
+.lyrico-gradient-copper {
+    /* https://uigradients.com/#Copper */
+    background: #b79891;
+    background: -webkit-linear-gradient(to top, #94716b, #b79891);
+    background: linear-gradient(to top, #94716b, #b79891);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-moonlit-asteroid {
+    /* https://uigradients.com/#MoonlitAsteroid */
+    background: #0f2027;
+    background: -webkit-linear-gradient(to top, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-delicate {
+    /* https://uigradients.com/#Delicate */
+    background: #d3cce3;
+    background: -webkit-linear-gradient(to bottom, #d3cce3, #e9e4f0);
+    background: linear-gradient(to bottom, #d3cce3, #e9e4f0);
+    text-shadow: 0 0 1px rgba(50, 50, 50, 0.5);
+    color: #222;
+}
+
+.lyrico-gradient-mauve {
+    /* https://uigradients.com/#Mauve */
+    background: #42275a;
+    background: -webkit-linear-gradient(to left, #42275a, #734b6d);
+    background: linear-gradient(to left, #42275a, #734b6d);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-ash {
+    /* https://uigradients.com/#Ash */
+    background: #606c88;
+    background: -webkit-linear-gradient(to left, #606c88, #3f4c6b);
+    background: linear-gradient(to left, #606c88, #3f4c6b);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-disco {
+    /* https://uigradients.com/#Disco */
+    background: #4ecdc4;
+    background: -webkit-linear-gradient(to left, #4ecdc4, #556270);
+    background: linear-gradient(to left, #4ecdc4, #556270);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-roseanna {
+  /* https://uigradients.com/#Roseanna */
+  background: #ffafbd;
+  background: -webkit-linear-gradient(to right, #ffafbd, #ffc3a0);
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    color: #322;
+}
+
+.lyrico-gradient-love-and-liberty {
+    /* https://uigradients.com/#LoveandLiberty */
+    background: #200122;
+    background: -webkit-linear-gradient(to top, #200122, #6f0000);
+    background: linear-gradient(to top, #200122, #6f0000);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-namn {
+    /* https://uigradients.com/#Namn */
+    background: #a73737;
+    background: -webkit-linear-gradient(to top, #a73737, #7a2828);
+    background: linear-gradient(to top, #a73737, #7a2828);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-orca {
+    /* https://uigradients.com/#Orca */
+    background: #44a08d;
+    background: -webkit-linear-gradient(to bottom, #44a08d, #093637);
+    background: linear-gradient(to bottom, #44a08d, #093637);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-mango {
+    /* https://uigradients.com/#Mango */
+    background: #ffe259;
+    background: -webkit-linear-gradient(to top, #ffa751, #ffe259);
+    background: linear-gradient(to top, #ffa751, #ffe259);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    color: #322;
+}
+
+.lyrico-gradient-purple {
+    /* https://uigradients.com/#80'sPurple */
+    background: #41295a;
+    background: -webkit-linear-gradient(to top, #41295a, #2f0743);
+    background: linear-gradient(to top, #41295a, #2f0743);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fef;
+}
+
+.lyrico-gradient-love-couple {
+    /* https://uigradients.com/#LoveCouple */
+    background: #3a6186;
+    background: -webkit-linear-gradient(to top, #3a6186, #89253e);
+    background: linear-gradient(to top, #3a6186, #89253e);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-limade {
+    /* https://uigradients.com/#Limeade */
+    background: #a1ffce;
+    background: -webkit-linear-gradient(to bottom, #a1ffce, #faffd1);
+    background: linear-gradient(to bottom, #a1ffce, #faffd1);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    color: #444;
+}
+
+.lyrico-gradient-under-lake {
+    /* https://uigradients.com/#UndertheLake */
+    background: #093028;
+    background: -webkit-linear-gradient(to bottom, #093028, #237a57);
+    background: linear-gradient(to bottom, #093028, #237a57);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-feel-the-love {
+    /* https://uigradients.com/#CanYouFeelTheLoveTonight */
+    background: #4568dc;
+    background: -webkit-linear-gradient(to top, #4568dc, #b06ab3);
+    background: linear-gradient(to top, #4568dc, #b06ab3);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.lyrico-gradient-firewatch {
+    /* https://uigradients.com/#Firewatch */
+    background: #cb2d3e;
+    background: -webkit-linear-gradient(to bottom, #cb2d3e, #ef473a);
+    background: linear-gradient(to bottom, #cb2d3e, #ef473a);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+    color: #fee;
+}
+
+.lyrico-gradient-portrait {
+    /* https://uigradients.com/#Portrait*/
+    background: #8e9eab;
+    background: -webkit-linear-gradient(to top, #8e9eab, #eef2f3);
+    background: linear-gradient(to top, #8e9eab, #eef2f3);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    color: #333;
+}

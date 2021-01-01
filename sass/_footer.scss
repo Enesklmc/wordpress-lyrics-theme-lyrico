@@ -1,0 +1,22 @@
+.site-footer-container .widget-title > hr{
+    opacity: .15;
+    margin-top: .5rem;
+    margin-left: 0;
+    margin-bottom: .5rem;
+	border-color: currentColor;
+    width: calc(15% + 1rem );
+    text-align: left;
+}
+hr.footer-hr{
+    opacity: .2;
+    border-top-color: inherit;
+}
+.site-footer-container{
+    position: relative;
+	@include box-shadow(0 0 4px rgba(0, 0, 0, 0.15));
+}
+
+.footer-menu > li > a {
+    display: block;
+    padding: .5rem 1rem;
+}

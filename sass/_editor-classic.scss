@@ -1,0 +1,19 @@
+blockquote {
+  border-left: 2px solid #777;
+  padding: 1.5rem;
+  font-size: 1.25rem;
+}
+
+cite {
+    display: block;
+    opacity: .75;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: inherit;
+}
+cite::before {
+    content: "\2014 \00A0";
+    opacity: .65;
+    color: inherit;
+}

@@ -1,0 +1,220 @@
+.lyrico-dashicon,
+.lyrico-dashicons{
+	font-family: dashicons;
+	font-size: inherit;
+	vertical-align: middle;
+}
+
+.social-media-bar .brand-icon:not(.fa-spotify):hover::after,
+.social-media-bar:not(.with-brand-colors) .brand-icon.fa-spotify:hover::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.1;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.navbar-light .social-media-bar .brand-icon:not(.fa-spotify):hover::after{
+    background-color: #333;
+}
+.brand-icon-item{
+	padding: .25rem;
+}
+.navbar-with-slider .brand-icon-item{
+ display: block;
+	padding: .5rem 2px;
+}
+
+.navbar-1 .social-media-bar a{
+     line-height: 40px;
+ }
+
+/* Brand Colors */
+.with-brand-colors .fa-facebook-f {
+  background: #3B5998;
+  color: white;
+}
+
+.with-brand-colors .fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.with-brand-colors .fa-youtube {
+  background: #ff0000;
+  color: white;
+}
+.with-brand-colors .fa-instagram {
+  background: #c32aa3;
+  color: white;
+}
+.with-brand-colors .fa-pinterest {
+  background: #bd081c;
+  color: white;
+}
+.with-brand-colors .fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.with-brand-colors .fa-tumblr {
+  background: #35465d;
+  color: white;
+}
+.lyrico-brand-icons.with-brand-colors .fa-spotify{
+	z-index: 0;
+}
+.lyrico-brand-icons.with-brand-colors .fa-spotify::before {
+  background: transparent;
+  font-size: 28px;
+  color: #1ed760;
+  vertical-align: bottom;
+}
+.lyrico-brand-icons.with-brand-colors .fa-spotify::after {
+	content: "";
+	position: absolute;
+    top: 2px;
+    bottom: 0;
+    left: 2px;
+    right: 0;
+	background-color: #191414;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    z-index: -1;
+}
+.with-brand-colors .fa-vimeo {
+  background: #1ab7ea;
+  color: white;
+}
+.with-brand-colors .fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+.with-brand-colors .fa-flickr {
+  background: #006add;
+  color: white;
+}
+.with-brand-colors .fa-rss {
+  background: #f26522;
+  color: white;
+}
+.with-brand-colors .fa-envelope {
+  background: #555;
+  color: white;
+}
+.with-brand-colors .fa-soundcloud {
+  background: #fe5000;
+  color: white;
+}
+.with-brand-colors .fa-whatsapp {
+  background: #25d366;
+  color: white;
+}
+.with-lyrico-icon a::before{
+    display: inline-block;
+	margin: 0 0.4rem;
+    font-family: "Font Awesome 5 Free";
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Menu Icons */
+.lyrico-home-icon a::before {
+    content: "\f015";
+}
+.lyrico-newspaper-icon a::before {
+    content: "\f1ea";
+}
+.lyrico-thumbtack-icon a::before {
+    content: "\f08d";
+}
+.lyrico-file-icon a::before {
+    content: "\f15c";
+}
+.lyrico-artist-icon a::before {
+    content: "\f0c0";
+}
+.lyrico-album-icon a::before {
+    content: "\f51f";
+}
+.lyrico-playlist-icon a::before {
+    content: "\f0cb";
+}
+.lyrico-genres-icon a::before {
+    content: "\f00a";
+}
+.lyrico-music-icon a::before {
+    content: "\f001";
+}
+
+/*  Listen The Song Section */
+.listen-the-song-on a{
+    display: inline-block;
+	padding: .25rem;
+}
+.lyrico-share-post li{
+    margin: 0 2px;
+}
+.lyrico-brand-icons .brand-icon {
+  position: relative;
+  @include transition( all .25s ease-in-out );
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+}
+.lyrico-brand-icons:not(.with-brand-colors) .brand-icon {
+	  font-size: 16px;
+}
+.lyrico-brand-icons:not(.with-brand-colors) .brand-icon.fa-spotify {
+	  font-size: 18px;
+}
+.lyrico-share-post .brand-icon:hover,
+.listen-the-song-on .brand-icon:hover{
+    opacity: .85;
+}
+
+.listen-the-song-on .brand-icon.fa-spotify::before{
+    position: relative;
+    bottom: 2px;
+}
+.listen-the-song-on .brand-icon.fa-spotify span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 12px;
+    background-color: #111;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+	color: #fff;
+}
+
+/* Sharing Section */
+.lyrico-share{
+    border-bottom: 3px solid #ddd;
+    padding: .75rem;
+    background-color: #eee;
+    color: #222;
+}
+.lyrico-share h4{
+    font-size: 25px;
+}
+.lyrico-share a{
+    margin: 0 10px;
+    font-size: 25px;
+}

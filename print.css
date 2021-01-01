@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/*
+Theme Name: Lyrico
+
+Adding print support. The print styles are based on the the great work of
+Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272/.
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Margins
+# Typography÷
+# Page breaks
+# Links
+# Visibility
+--------------------------------------------------------------*/
+@media print {
+  /* Setting content width, unsetting floats and margins */
+  #content, #page {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+
+  @page :first {
+    margin: 1.25cm 2cm;
+  }
+  @page {
+    margin: 2cm;
+  }
+  body {
+    font: 13pt Sans-serif;
+    line-height: 1.3;
+    background: #fff !important;
+    color: #000;
+  }
+
+  .entry .entry-content p {
+    color: #000 !important;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2, h3, h4 {
+    font-size: 14pt;
+    margin-top: 25px;
+  }
+
+  /* Defining all page breaks */
+  a {
+    page-break-inside: avoid;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  img, figure {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  table, pre {
+    page-break-inside: avoid;
+  }
+
+  ul, ol, dl {
+    page-break-before: avoid;
+  }
+
+  /* Displaying link color and link behaviour */
+  a:link, a:visited, a {
+    background: transparent;
+    color: #520;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+  }
+
+  a {
+    page-break-inside: avoid;
+  }
+
+  a:after > img {
+    content: "";
+  }
+
+  article a[href^="#"]:after {
+    content: "";
+  }
+
+  a:not(:local-link):after {
+    content: " < " attr(href) "> ";
+  }
+
+  /**
+   * Making intergated videos disappear, and removing the iframes' whitespace to zero.
+   */
+  .entry iframe, ins {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    line-height: 0pt !important;
+    white-space: nowrap;
+  }
+
+  .embed-youtube, .embed-responsive {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .lyrico-module-wrapper, .lyrico-module {
+    box-shadow: none;
+    border: 0;
+    background: #fff;
+  }
+
+  /* Hiding unnecessary elements for the print */
+  nav, #navigation-top, .site-footer-container, .edit-link, #secondary-div, #other-songs-from-the-album-module,
+.table-song-info, .lyrico-share, #related-lyrics-module, .comment-respond, #comments, .page-links, .lyrico-song-writers, .lyrico-post-meta {
+    display: none;
+  }
+
+  .lyrics-header-background-image, #go-top-button {
+    display: none !important;
+  }
+
+  .single-header-container header,
+.page-header-container header {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .single-header-container,
+.page-header-container {
+    background: transparent;
+  }
+
+  .single-header-container a,
+.page-header-container a {
+    background: transparent;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .single-header-container a:link, .single-header-container a:visited, .single-header-container a,
+.page-header-container a:link, .page-header-container a:visited, .page-header-container a {
+    background: transparent;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+/*# sourceMappingURL=print.css.map */

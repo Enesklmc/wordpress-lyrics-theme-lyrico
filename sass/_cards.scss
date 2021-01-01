@@ -1,0 +1,179 @@
+   .card-img-overlay{
+	@include flexbox();
+   	@include align-items(center);
+   	@include justify-content(center);
+   	overflow:hidden;
+   	background-color:rgba(70, 70, 70, 0.7);
+   	font-size:1rem;
+   	line-height:1.25;
+   }
+
+   @media (min-width: 768px) {
+   	.card-img-overlay{
+   		font-size:18px;
+   	}
+   }
+
+.album-year{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card-image-overlay-primary-title:hover{
+	text-decoration: none;
+}
+.card-image-overlay-secondary-title{
+    font-size: 13px;
+	color: #e6e6e6;
+}
+.card{
+    background-color: transparent;
+}
+.card-body{
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+.card-footer {
+	font-size: 85%;
+}
+.card-footer .tags-links{
+    @include secondary-text();
+}
+.card-footer .tags-links .dashicons{
+    vertical-align: middle;
+}
+.genre-card-wrapper{
+    padding: 1px;
+}
+.genre-card{
+	@include flexbox();
+   	@include align-items(center);
+   	@include justify-content(center);
+    position: relative;
+    border: 2px solid #353535;
+	width: 100%;
+	height: 100%;
+    min-height: 150px;
+    background: rgb(69, 69, 69);
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+    word-break: break-word;
+}
+.genre-card-title{
+    @include transition( color .25s ease-in-out );
+    padding-left: .75rem;
+    padding-right: .75rem;
+    font-size: 1.2rem;
+}
+.genre-card-title:hover{
+    color: #fff;
+}
+ .entry .entry-content a.genre-card-title{
+    color: inherit;
+    text-decoration: none;
+}
+
+.text-on-image-card{
+    overflow: hidden;
+}
+.text-on-image-card a.stretched-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+    @include transition( all 0.25s ease-in-out );
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    width: 40%;
+
+}
+.text-on-image-card a.stretched-link:hover{
+    color: inherit;
+}
+.text-on-image-card a.stretched-link:hover:before,
+.text-on-image-card a.stretched-link:focus:before{
+      opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.lyrico-blog-post .entry-excerpt{
+	font-weight: 600;
+}
+
+.sticky .lyrico-blog-post .entry-excerpt{
+    font-size: .9rem;
+}
+.sticky .lyrico-blog-post .cat-links{
+    margin-bottom: 0;
+}
+
+.lyrico-blog-post.card{
+	border-radius: 25px;
+}
+.lyrico-blog-post .post-date{
+	opacity: 0.75;
+	font-weight:600;
+}
+.lyrico-blog-post .card-image{
+	transform: translateY(-50px);
+	border-radius: 25px;
+	box-shadow: 4px 13px 30px 1px rgba(50, 50, 50, 0.2);
+}
+.lyrico-blog-post .card-image img{
+	border-radius: 25px;
+}
+.lyrico-blog-post .card-footer{
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+.lyrico-blog-post .card-footer,
+.lyrico-blog-post .card-content{
+	width: 100%;
+	text-align: center;
+}
+.has-post-thumbnail .lyrico-blog-post .card-content{
+	margin-top:-25px;
+}
+
+body.modular-design .has-post-thumbnail.lyrico-blog-post-wrapper {
+	margin-top: 38px;
+}
+.has-post-thumbnail.lyrico-blog-post-wrapper {
+	margin-top: 54px;
+}
+@media (min-width: 768px) {
+	body.modular-design .has-post-thumbnail.lyrico-blog-post-wrapper {
+		margin-top: 46px;
+	}
+}
+/* Genre Card */
+.full-width-link::after{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	@include transition( background-color .2s ease-in-out );
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	pointer-events: auto;
+}
+.full-width-link:hover::after{
+	background-color: rgba(255,255,255,0.1) !important;
+}

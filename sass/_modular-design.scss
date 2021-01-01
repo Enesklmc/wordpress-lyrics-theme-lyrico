@@ -1,0 +1,176 @@
+body.modular-design .d-modular-design-none{
+	display: none;
+}
+body.modular-design .show-comments-button{
+    margin-top: .75rem;
+}
+
+ body.modular-design .lyrico-post-meta{
+   	margin-bottom: .75rem;
+   }
+   body.modular-design .post-navigation{
+   	margin-bottom: .75rem;
+   }
+   body.modular-design #secondary-div .lyrico-module-wrapper:first-child{
+   	margin-top: 0;
+   }
+
+   @media (min-width: 768px) {
+   	body.modular-design #secondary-div .lyrico-module-wrapper:first-child{
+   		margin-top: 1rem;
+   	}
+   }
+
+   .module-header .h1,
+   .module-header .h2,
+   .module-header .h3,
+   .module-header .h4,
+   .module-header .h5,
+   .module-header .h6{
+   	margin-bottom: 0;
+   }
+
+.lyrico-blog-post-wrapper{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+body.modular-design #secondary-div .widget,
+body.modular-design .lyrico-module,
+body.modular-design .lyrico-share,
+body.modular-design .lyrico-blog-post {
+    @include box-shadow( 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) );
+}
+
+body.modular-design #secondary-div .widget{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border: 0;
+    border-radius: .25rem;
+}
+
+@media only screen and (min-width: 768px) {
+    body.modular-design #secondary-div .widget{
+        margin-top: $modular-design-space-lg;
+        margin-bottom: $modular-design-space-lg;
+    }
+}
+
+body.modular-design .main-container{
+    @include box-shadow( none );
+    background-color: transparent !important;
+}
+
+body.modular-design #primary-div,
+body.modular-design #secondary-div{
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+@media only screen and (min-width: 768px) {
+    body.modular-design #primary-div,
+    body.modular-design #secondary-div{
+        padding-right: $modular-design-space-lg;
+        padding-left: $modular-design-space-lg;
+    }
+}
+@media only screen and (min-width: 768px) {
+    body.modular-design.no-sidebar #primary-div,
+    body.modular-design.no-sidebar #secondary-div{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+body.modular-design .lyrico-module {
+    position: relative;
+    padding: .75rem;
+    background-color: #fff;
+}
+body.modular-design .lyrico-blog-post{
+    background-color: #fff;
+}
+.lyrico-module-wrapper{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+body.modular-design .lyrico-blog-post-wrapper ,
+body.modular-design .lyrico-module-wrapper {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    body.modular-design .lyrico-blog-post-wrapper ,
+    body.modular-design .lyrico-module-wrapper{
+        margin-top: $modular-design-space-lg;
+        margin-bottom: $modular-design-space-lg;
+    }
+}
+body.modular-design.no-sidebar .lyrico-blog-post-wrapper ,
+body.modular-design.no-sidebar .lyrico-module-wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+body.modular-design .lyrico-module,
+body.modular-design .lyrico-share {
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+body.modular-design .other-songs-from-the-album-header{
+    border-top: none;
+	border-right: none;
+	border-bottom: 2px solid #ccc;
+	border-left: none;
+    background-color: #eee;
+	color: #212529;
+}
+
+.module-header {
+	margin-top: .25rem;
+    margin-bottom: 1rem;
+}
+
+.module-header .slider-nav{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+.module-button{
+    word-break: break-word;
+}
+
+// Avoid big space between primary and secondary div.
+@media (min-width: 768px) {
+    body:not(.full-width-content).sidebar-left.modular-design #primary-div{
+        padding-right: 0 !important;
+        padding-left: 0  !important;
+    }
+
+    body.full-width-content.sidebar-left.modular-design:not(.no-sidebar) #primary-div{
+        padding-left: 0  !important;
+    }
+
+    body:not(.full-width-content).sidebar-left.modular-design #secondary-div{
+        padding-left: 0  !important;
+    }
+
+    body:not(.full-width-content).sidebar-right.modular-design #primary-div{
+        padding-right: 0  !important;
+        padding-left: 0  !important;
+    }
+    body.full-width-content.sidebar-right.modular-design #primary-div{
+        padding-right: 0  !important;
+    }
+    body:not(.full-width-content).sidebar-right.modular-design #secondary-div{
+        padding-right: 0  !important;
+    }
+    body:not(.full-width-content).no-sidebar.modular-design #primary-div{
+        padding-right: 0  !important;
+        padding-left: 0  !important;
+    }
+}

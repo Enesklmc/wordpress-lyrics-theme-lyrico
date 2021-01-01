@@ -1,0 +1,184 @@
+.lyrico-widget-style-simple-list{
+    font-weight: 600;
+    list-style-type: circle;
+    padding-left: 20px;
+}
+.lyrico-widget-style-simple-list li a:hover{
+    text-decoration: underline;
+}
+.lyrico-widget-style-simple-list-ordered{
+    font-weight: 600;
+    list-style-type: decimal;
+    padding-left: 18px;
+}
+.widget{
+	-ms-word-break: break-all;
+    word-break: break-word;
+}
+#secondary-div .widget {
+    margin: 1.5rem 0 1.5rem 0;
+	@include box-shadow( 0 0 1px #777 );
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.title-dark,
+#secondary-div .widget-title{
+    position: relative;
+    display: block;
+    margin-bottom: 1rem;
+	-ms-word-break: break-all;
+    word-break: break-word;
+}
+
+#secondary-div .widget-title h5{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.widget select {
+  max-width: 100%;
+}
+
+.widget_recent_comments .comment-author-link,
+.widget_recent_entries .post-date{
+    font-size: .9rem;
+    color: #aaa;
+}
+
+.widget_archive ul,
+.widget_categories ul,
+.widget_meta ul,
+.widget_nav_menu ul,
+.widget_pages ul,
+.widget_recent_comments ul,
+.widget_recent_entries ul,
+.widget_rss ul {
+  padding: 0;
+  list-style: none;
+}
+
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li,
+.widget_nav_menu ul li,
+.widget_pages ul li,
+.widget_rss ul li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #767676;
+}
+
+.widget_categories ul li{
+    display: inline-block;
+    padding-right: .25rem;
+    padding-left: .25rem;
+}
+.widget_categories ul li a{
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: .75rem;
+
+}
+
+.widget_nav_menu ul li,
+.widget_pages ul li {
+    display: inline;
+    padding-right: .25rem;
+    padding-left: .25rem;
+    line-height: 1.4;
+}
+
+.widget_nav_menu ul,
+.widget_categories ul,
+.widget_pages ul {
+    text-align: center;
+}
+
+.widget_archive ul ul,
+.widget_categories ul ul,
+.widget_meta ul ul,
+.widget_nav_menu ul ul,
+.widget_pages ul ul,
+.widget_recent_comments ul ul,
+.widget_recent_entries ul ul,
+.widget_rss ul ul {
+  counter-reset: submenu;
+}
+
+.widget_archive ul ul > li > a::before,
+.widget_categories ul ul > li > a::before,
+.widget_meta ul ul > li > a::before,
+.widget_nav_menu ul ul > li > a::before,
+.widget_pages ul ul > li > a::before,
+.widget_recent_comments ul ul > li > a::before,
+.widget_recent_entries ul > li > a::before,
+.widget_rss ul ul > li > a::before {
+  content: "\2014 \00A0" counters(submenu, "\2014 \00A0", none);
+  opacity: .7;
+  font-weight: normal;
+  counter-increment: submenu;
+}
+
+.widget_tag_cloud .tagcloud {
+  font-weight: 700;
+}
+
+body.modular-design #secondary-div .widget.widget_search {
+	background-color: #fff;
+	color: #333;
+}
+
+.widget_search .search-field {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .widget_search .search-field {
+    width: auto;
+  }
+}
+
+.widget_search .search-submit {
+  display: block;
+  margin-top: 1rem;
+}
+
+.widget_calendar .calendar_wrap {
+  text-align: center;
+}
+
+.widget_calendar .calendar_wrap table td,
+.widget_calendar .calendar_wrap table th {
+  border: 1px solid #eee;
+  padding: .25rem;
+
+}
+
+.widget_calendar .calendar_wrap a {
+  text-decoration: underline;
+}
+.widget_calendar caption{
+    background-color: #eee;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#secondary-div .widget-wrapper:first-child > .widget{
+    margin-top: 0;
+}
+@media (min-width: 768px) {
+    #secondary-div .widget-wrapper:first-child > .widget{
+        margin-top: 1.5rem;
+    }
+    body.modular-design #secondary-div .widget-wrapper:first-child > .widget{
+        margin-top: 1rem;
+    }
+}

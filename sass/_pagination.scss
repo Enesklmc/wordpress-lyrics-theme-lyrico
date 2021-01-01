@@ -1,0 +1,70 @@
+.pagination-navbar{
+	@include flexbox();
+	@include flex-wrap(wrap);
+	@include align-items(center);
+	@include justify-content(center);
+}
+.page-links-title,
+.page-link-number,
+.pagination-navbar .page-numbers{
+    margin: 0 6px;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.page-links > .page-link-number,
+.page-numbers.current{
+    position: relative;
+    font-size: 1.75rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.page-links > .page-link-number::after,
+.page-numbers.current::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 4px);
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid currentColor;
+    border-left: 4px solid transparent;
+    width: 8px;
+}
+
+.prev.page-numbers{
+    margin-left: 0;
+}
+.next.page-numbers{
+    margin-right: 0;
+}
+.prev.page-numbers,
+.next.page-numbers{
+    @include flexbox();
+	@include justify-content(center);
+	@include align-items(center);
+    border: 1px solid #777;
+    width: 36px;
+    height: 36px;
+    font-size: inherit;
+	text-decoration: none;
+    &:hover{
+        background-color: #777;
+        color: white;
+    }
+    & > span {
+        width: auto;
+        height: auto;
+        line-height: 0;
+        vertical-align: middle;
+    }
+}
+
+.page-numbers.dots{
+    font-size: .9rem;
+}
+
+.pagination-navbar [class="page-numbers"]:hover{
+    color: inherit;
+    text-decoration: underline;
+}
