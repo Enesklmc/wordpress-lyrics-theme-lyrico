@@ -3,6 +3,8 @@ This theme is created from scratch by me while learning and self developing, it'
 
 ***
 ## Documentation
+
+https://enesklmc.github.io/wordpress-lyrics-theme-lyrico/
 ***
 Full Version Wordpress Theme
 
