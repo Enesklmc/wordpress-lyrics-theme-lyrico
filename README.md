@@ -2,7 +2,7 @@
 This theme is created from scratch by me while learning and self developing, it's totally free. 
 
 ***
-[## Documentation](https://www.google.com)
+## [Documentation](https://www.google.com)
 
 https://enesklmc.github.io/wordpress-lyrics-theme-lyrico/
 ***
