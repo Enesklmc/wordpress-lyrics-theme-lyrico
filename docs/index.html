@@ -1,1 +1,933 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>klmc Themes</title>
+    <meta name="description" content="WordPress Themes.">
+    <link rel="stylesheet" href="bootstrap.min.css">
+	<link href="assets/css/fontawesome-all.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <style>
+@media (min-width: 992px){
+	.side-column{
+		width: 280px;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.main-column{
+		margin-left: 280px;
+	}
+}
+
+		body{
+			font-family: 'Open Sans', sans-serif;
+			background: #222;
+			color:#eee;
+		}
+
+        body.vine .lyrico-sec {
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        body.midnight .lyrico-sec ,
+        body.red .lyrico-sec,
+        body.influ .lyrico-sec ,
+        body.army .lyrico-sec, 
+        body.lawrence .lyrico-sec, 
+        body.dark-ocean .lyrico-sec, 
+        body.moonlit .lyrico-sec {
+            background-color: rgba(0,0,0,0.5);
+        }
+        .smaller-p {
+            font-size: .9rem;
+        }
+
+        .midnight {
+            background: #232526;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .vine {
+background: #093028;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        
+        .red{
+background: #870000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        .moonlit{
+            background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .influ{background: #C04848;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+        
+        .army{
+            background: #414d0b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #727a17, #414d0b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #727a17, #414d0b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .lawrence{
+            background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+		
+		.dark-ocean{
+			background: #373B44;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+    .sidebar-nav {
+        word-break: break-word;
+    }
+        a{
+            color: inherit;
+        }
+        a:hover{
+            color: inherit;
+        }
+		.child-list-item{
+			margin-left: 1rem;
+		}
+		.child-child-list-item{
+			margin-left: 2rem;
+		}
+		.child-list-item a::before{
+			content: "- "; 
+		}
+		.order{
+			margin-right: .25rem;
+		}
+		.icon-col i{
+			font-size: 2rem;
+			display: block;
+			margin-top: .5rem;
+		}
+		.sidebar-nav-content{
+			overflow-y: scroll;
+			height: 85vh;
+		}
+		b {
+			font-weight: 700;
+		}
+		.clearfix::after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+		.mobile-icon{
+			font-size:2rem;
+			text-align: center;
+		}
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none fixed-top">
+  <a class="navbar-brand" href="#">Table of Contents</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Let's get started
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#install-lyrico">Install Lyrico</a>
+          <a class="dropdown-item" href="#install-lyrico-plugin">Install Lyrico Plugin</a>
+          <a class="dropdown-item" href="#install-starter-data">Install Starter Content</a>
+          <a class="dropdown-item" href="#creating-template-pages">Create Template Pages</a>
+          <a class="dropdown-item" href="#setup-front-page">Setup Front Page</a>
+          <a class="dropdown-item" href="#activate-menu">Activate Menu</a>
+          <a class="dropdown-item" href="#add-icons-to-menu">Add Icons to Menu</a>
+        </div>
+      </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#setup-homepage">Setup Homepage</a>
+	  </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Customize Lyrico
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+          <a class="dropdown-item" href="#settings-based-on-the-template">Settings based on the template</a>
+          <a class="dropdown-item" href="#layout-and-settings">Site Layout & Settings</a>
+        </div>
+      </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#create-lyrics">Creating Lyrics</a>
+	  </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#create-playlist">Creating Playlist</a>
+	  </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#lyrico-posts-widget">Widget: Lyrico Posts</a>
+	  </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#google-fonts">Google Fonts</a>
+	  </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#source-credits">Sources and Credits</a>
+	  </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="lyrico-sec position-relative">
+	<div class="side-column d-none d-lg-block py-1 px-3">
+		 <div class="sidebar-nav text-light">
+			<h3 class="mt-4 mb-2">Table of Contents</h3>
+			<ul class="sidebar-nav-content text-light list-unstyled border rounded p-3">
+				<li>
+					<a href="#get-started">Let's get started</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#install-lyrico">Install Lyrico</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#install-lyrico-plugin">Install Lyrico Plugin</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#install-starter-data">Install Starter Content</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#creating-template-pages">Create Template Pages</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#setup-front-page">Setup Front Page</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#activate-menu">Activate Menu</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#add-icons-to-menu">Add Icons to Menu</a>
+				</li>
+				<hr class="border-secondary">
+				<li>
+					<a href="#setup-homepage">Setup Homepage</a>
+				</li>	
+				<hr class="border-secondary">
+				<li>
+					<a href="#customize-lyrico">Customize Lyrico</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#settings-based-on-the-template">Settings based on the template</a>
+				</li>
+				<li class="child-list-item">
+					<a href="#layout-and-settings">Site Layout & Settings</a>
+				</li>
+				<li class="child-child-list-item">
+					<a href="#general-settings">General</a>
+				</li>
+				<li class="child-child-list-item">
+					<a href="#navigation-settings">Navigation</a>
+				</li>
+				<li class="child-child-list-item">
+					<a href="#header-settings">Header</a>
+				</li>
+				<li class="child-child-list-item">
+					<a href="#content-settings">Content</a>
+				</li>
+				<li class="child-child-list-item">
+					<a href="#footer-settings">Footer</a>
+				</li>
+				<hr class="border-secondary">
+				<li>
+					<a href="#create-lyrics">Creating Lyrics</a>
+				</li>
+				<li class="mt-2">
+					<a href="#create-playlist">Creating Playlist</a>
+				</li>
+				<hr class="border-secondary">
+				<li>
+					<a href="#lyrico-posts-widget">Widget: Lyrico Posts</a>
+				</li>
+				<hr class="border-secondary">
+				<li>
+					<a href="#google-fonts">Google Fonts</a>
+				</li>
+				<hr class="border-secondary">
+				<li class="mb-4">
+					<a href="#source-credits">Sources and Credits</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-column py-1 px-4 text-light">
+		<h1 class="text-center my-5" style="font-weight:300;">
+			Lyrico Documentation
+		</h1>
+		<p>The Lyrico theme for WordPress made for everybody that wants to have a Lyrics website, featuring Lyrics,
+		Artists, Albums, Playlists and connections between each other. Lyrico has the features that should be on a lyrics website,
+		including responsive design and a lot of customization options.
+		</p>
+		<p class="alert-dark p-3 rounded my-4">Lyrico requires the latest WordPress version (5.3 or later) and PHP (7.1 or later).</p>
+		<h1 id="get-started" class="bg-dark p-3 text-left mt-4 border-bottom" style="font-weight:300;">
+			Let's get started
+		</h1>
+		<div class="content px-2">
+			<h2 id="install-lyrico" class="mt-5 mb-3">Install Lyrico</h2>
+			<img class="img-fluid mb-4 img-thumbnail" src="assets/images/install-lyrico.gif">
+			<p>
+			<span class="order badge badge-pill badge-light">1</span>
+			Login to your WordPress dashboard(wp-admin).
+			</p>
+			<p>
+			<span class="order badge badge-pill badge-light">2</span>
+			Click <b>Appearance > Themes</b> from the menus on the left. 
+			</p>
+			<p>
+			<span class="order badge badge-pill badge-light">3</span>
+			Now you will see your installed Themes. Click on <b>Add New</b> button at the top of the themes.
+			</p>
+			<p>
+			<span class="order badge badge-pill badge-light">4</span>
+			Then click on <b>Upload Theme</b> button (in the same place as the <b>Add New</b> button) and a <b>Choose File</b> will appear.
+			</p>
+			<p>
+			<span class="order badge badge-pill badge-light">5</span>
+			Click on the <b>Choose File</b> button and browse to the <b>lyrico.zip</b> file inside the downloaded and extracted package(lyrico-files.zip).
+			</p>
+			<p>
+			<span class="order badge badge-pill badge-light">6</span>
+			Then click on <b>Install Now</b> and wait for the installation to finish. Then click on <b>Activate</b> to activate Lyrico.
+			</p>
+			
+			<h2 id="install-lyrico-plugin" class="mt-5 mb-3">Install Lyrico Plugin</h2>
+			<img class="img-fluid mb-4 img-thumbnail" src="assets/images/install-lyrico-plugin.gif">
+			<p>- Lyrico Plugin comes within the lyrico.zip file.The only thing you should do is activate the Lyrico Plugin.</p>
+			<p><span class="order badge badge-pill badge-light">1</span> After you installed <b>Lyrico Theme</b> required plugins will appear top of your screen.</p>
+			<p><span class="order badge badge-pill badge-light">2</span> Click <b>Begin activating plugin</b> in the notification window.</p>
+			<p><span class="order badge badge-pill badge-light">3</span> After Install Required Plugins page opened, click <b>Activate</b> under the Lyrico Plugin. Done.</p>
+			<p><span class="order badge badge-pill badge-light">4</span> Now, go <b>Dashboard</b> and when you check the Admin menus you will see Lyrics, Albums, Artists, Playlists, If the plugin was installed successfully.</p>
+			<div class="p-3 alert-dark rounded">
+				<p>- Lyrico Plugin will activate:</p>
+				<ul>
+					<li>Post types: Lyrics, Albums, Artists, Playlists</li>
+					<li>Custom meta boxes</li>
+					<li>Custom Taxonomy: Genres</li>
+					<li>Lyrico Latest Posts Widget</li>
+					<li>Gutenberg Playlist Item block</li>
+				</ul>
+			</div>
+
+			<h2 id="install-starter-data" class="mt-5 mb-3">Install Starter Content</h2>
+			<p>Starter content will make your website look like <a target="_blank" style="font-weight:600;text-decoration:underline;" href="http://lyrico.klmcthemes.com/">http://lyrico.klmcthemes.com/</a>.</p>
+			<p>It will add Pages, Lyrics, Artists, Albums, Playlists, Images and Menu. You can edit them later.
+			<p><span class="order badge badge-pill badge-light">1</span> Go <b>Tools -> Import</b> from Admin menus.</p>
+			<p><span class="order badge badge-pill badge-light">2</span> Find <b>WordPress</b> from the list.</p>
+			<p><span class="order badge badge-pill badge-light">3</span> Click on <b>Install Now</b>, then <b>Run Importer</b>.</p>
+			<p><span class="order badge badge-pill badge-light">4</span> Choose <b>starter_content.xml</b> file from Lyrico Package(lyrico-files) and click <b>Upload file and Import</b> button.</p>
+			<p><span class="order badge badge-pill badge-light">5</span> Don't forget to activate <b>Download and import file attachments</b> option for Images.</p>
+
+			<h2 id="creating-template-pages" class="mt-5 mb-3">Creating Template Pages</h2>
+			<p><span class="order badge badge-pill badge-light">1</span> Create a new page from <b>Pages -> Add New</b></p>
+			<p><span class="order badge badge-pill badge-light">2</span> Add Title, example : <b>Homepage</b>.</p>
+			<p><span class="order badge badge-pill badge-light">3</span> Select Lyrico Homepage Template from the Page Attributes Section right of the editor.</p>
+			<div class="row my-4">
+				<div class="col-md-6">
+					Templates
+					<hr class="border">
+					<b>Genres:</b>
+					<p>Shows All created genres.</p>
+					
+					<b>Lyrico Homepage:</b>
+					<p>Lyrico Home page template.</p>
+					
+					<b>Albums:</b>
+					<p>Shows Popular and All Albums. (customizable).</p>
+					
+					<b>Artists:</b>
+					<p>Shows Popular and All Artists. (customizable).</p>
+					
+					<b>Playlists:</b>
+					<p>Shows Popular and All Playlists. (customizable).</p>
+					
+					<b>Sidebarless Default Page:</b>
+					<p>It creates an empty page without sidebar.</p>
+				</div>
+
+				<div class="col-md-6">
+					<img class="img-fluid mb-4 img-thumbnail" src="assets/images/page-templates.png">
+				</div>
+			</div>
+
+			<h2 id="setup-front-page" class="mt-5 mb-3">Setup Front Page</h2>
+			<p><span class="order badge badge-pill badge-light">1</span> Go to <b>Settings -> Reading.</b></p>
+			<p><span class="order badge badge-pill badge-light">2</span> Select <b>A static page</b>.</p>
+			<p><span class="order badge badge-pill badge-light">3</span> Then select the page you've created with homepage template "<b>Home</b>" for <b>Homepage</b>.</p>
+			<p><span class="order badge badge-pill badge-light">4</span> And select the page you've created with Default page template "<b>Blog</b>" for <b>Posts Page</b>.</p>
+			<img class="img-fluid mb-4 img-thumbnail" src="assets/images/setup-front-page.png">
+
+			<h2 id="activate-menu" class="mt-5 mb-3">Activate Menu</h2>
+			<img class="img-fluid mb-4 img-thumbnail" src="assets/images/create-menu.gif">
+			<p><span class="order badge badge-pill badge-light">1</span> Go to <b>Appearance -> Menus.</b></p>
+			<p><span class="order badge badge-pill badge-light">2</span> Write your Menu Name, then click <b>Create Menu</b>.</p>
+			<p><span class="order badge badge-pill badge-light">3</span> Select pages you've just created and <b>Add to Menu</b>.</p>
+			<p><span class="order badge badge-pill badge-light">4</span> Select Display location from <b>Menu Settings</b>. Show your menu in <b>Top Menu</b> or <b>Footer</b>.</p>
+		</div><!-- Get started .content -->
+		<h2 id="add-icons-to-menu" class="mt-5 mb-3">
+			Add Icons to Menu
+		</h2>
+		<div class="content px-2">
+			<p class="my-4">You can add several <b>Font Awesome</b> icons to your Menu items by adding CSS class to them.</p>
+			<p>Copy CSS class from below to paste <b>CSS Classes (optional)</b> field.</p>
+			<img class="img-fluid mb-4 img-thumbnail" src="assets/images/add-icons.png">
+			<div class="row">
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-home-icon</span>
+						<i class="fas fa-home"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-newspaper-icon</span>
+						<i class="fas fa-newspaper"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-thumbtack-icon</span>
+						<i class="fas fa-thumbtack"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-file-icon</span>
+						<i class="fas fa-file-alt"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-artist-icon</span>
+						<i class="fas fa-users"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-album-icon</span>
+						<i class="fas fa-compact-disc"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-playlist-icon</span>
+						<i class="fas fa-list-ol"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-genres-icon</span>
+						<i class="fas fa-th"></i>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="alert alert-light text-center icon-col" role="alert">
+						<span>with-lyrico-icon lyrico-music-icon</span>
+						<i class="fas fa-music"></i>
+					</div>
+				</div>
+			</div>
+		</div><!-- Customize Control .content -->
+		<h1 id="setup-homepage" class="bg-dark p-3 text-left mt-5 border-bottom" style="font-weight:300;">
+			Setup Homepage
+		</h1>
+		<div class="content px-2">
+			<p class="my-4">After <b>Setup Front Page</b> and activate <b>Lyrico Homepage Template</b> as your front page, you can customize homepage from <b>Customizer</b>.
+			<img class="img-fluid my-4 img-thumbnail" src="assets/images/home-setup.png">
+			<div class="alert-danger p-3 border border-danger rounded">
+				<p>You should select <b>Playlists</b> Page from <b>Select Playlists Page</b> setting (also <b>Select Artists Page</b> as your artists page, <b>Select Albums Page</b> as your albums page, <b>Select Blog Posts Page</b> as your latest post page).</p>
+				<p>The page to which the button sends the user needs to be selected, otherwise buttons are not gonna work.</p>
+			</div>
+		</div>
+		<h1 id="customize-lyrico" class="bg-dark p-3 text-left mt-5 border-bottom" style="font-weight:300;">
+			Customize Lyrico
+		</h1>
+		<p class="my-4">All customization settings are found in the <b>Appearance -> Customize</b> section on Admin Menu.</p>
+		<img class="img-fluid mb-4 img-thumbnail" src="assets/images/customizer-sections.png">
+		<div class="content px-2">
+			<h2 id="settings-based-on-the-template" class="mt-5 mb-3">Settings based on the currently previewed page</h2>
+			<img class="img-fluid mb-4 img-thumbnail" src="assets/images/settings-based-on-template.gif">
+			<p>These settings appear according to the currently previewed template.</p>
+			<p>For Example: </p>
+			<p>When you look at <b>Artists Page</b> in your customizer screen there will be <b>Artist Layout & Settings</b> section in your customizer.</p>
+			<p>These pages have additional settings that will be appear when you change the page from customizer: <b>Home Page</b>, <b>Playlists</b>, <b>Artists</b>, <b>Albums</b>, <b>Single Lyrics</b>, <b>Single Playlist</b>, <b>Single Artist</b>, <b>Single Album</b>, <b>Genres</b>.</p>
+			
+			<h2 id="layout-and-settings" class="mt-5 mb-3">Site Layout & Settings</h2>
+			<div class="row">
+				<div class="col-md-6 d-flex align-items-center justify-content-center">
+					<span class="my-4 h3"><b>The Layout</b></span>
+				</div>
+				<div class="col-md-6 border border-white rounded p-0">
+					<div style="height:30px;width:100%;background-color:#888;line-height:30px;font-size:18px;text-align:center;">Navigation</div>
+					<div style="height:75px;width:100%;background-color:#444;line-height:75px;font-size:18px;text-align:center;">Header</div>
+					<div style="height:180px;width:100%;background-color:#fff;line-height:180px;font-size:22px;text-align:center;color:#000;">Content</div>
+					<div style="height:75px;width:100%;background-color:#444;line-height:75px;font-size:18px;text-align:center;">Footer</div>
+				</div>
+			</div>
+			<div class="content pl-4 pr-2">
+				<h3 id="general-settings" class="sub-section mt-4"> 1. General</h3>
+				<div class="sub-content px-4">
+					<h5 class="text-md-left"><b>- Activate Go Top Button</b></h5>
+					<div class="row">
+						<div class="col">
+							<p>"Go top" button allows users to smoothly scroll back to the top of the page. This button appears when the user scrolls down.</p>
+						</div>					
+						<div class="col">
+							<img class="img-fluid mb-4 img-thumbnail" src="assets/images/go-top-button.png">
+						</div>
+					</div>
+				</div>
+
+				<hr class="border-secondary">
+
+				
+				<h3 id="navigation-settings" class="sub-section mt-4">2. Navigation</h3>
+				<div class="sub-content px-4">
+					<h5 class="my-4"><b> - Navbar Layout</b></h5>
+					<p>There are 6 Navigation templates to choose from.</p>
+					<div class="row clearfix alert-dark p-3 rounded my-4 navbar-layout-row">
+						<div class="col-12"><p class="h4 mb-4 mt-3"><b>1. Navigation with modal menu</b></p></div>
+						<div class="col-12"><img class="img-fluid mb-4 img-thumbnail" src="assets/images/navbar-1.png"></div>					
+						<div class="col-12 col-md-3 text-center mb-5 mb-md-0">
+							<div class="bg-light p-2 mb-1">
+								<i class="fas fa-mobile-alt mobile-icon "></i>
+							</div>
+							<img class="img-fluid border border-dark rounded clearfix" src="assets/images/navbar-1-mobile.png">
+						</div>
+						<div class="col-12 col-md-9">
+							<img class="img-fluid" src="assets/images/navbar-1-desktop.png">
+						</div>
+					</div>
+
+					<div class="row clearfix alert-dark p-3 rounded my-4 navbar-layout-row">
+						<div class="col-12"><p class="h4 mb-4 mt-3"><b>2. Simple Navigation</b></p></div>
+						<div class="col-12"><img class="img-fluid mb-4 img-thumbnail" src="assets/images/navbar-2.png"></div>
+						<div class="col-12 col-md-3 text-center mb-5 mb-md-0">
+							<div class="bg-light p-2 mb-1">
+								<i class="fas fa-mobile-alt mobile-icon "></i>
+							</div>
+							<img class="img-fluid border border-dark rounded clearfix" src="assets/images/navbar-2-mobile.png">
+						</div>
+						<div class="col-12 col-md-9">
+							<img class="img-fluid" src="assets/images/navbar-2-desktop.png">
+						</div>
+					</div>
+				
+					<div class="row clearfix alert-dark p-3 rounded my-4 navbar-layout-row">
+						<div class="col-12"><p class="h4 mb-4 mt-3"><b>3. Double Row Simple Navigation</b></p></div>
+						<div class="col-12"><img class="img-fluid mb-4 img-thumbnail" src="assets/images/navbar-3.png"></div>
+						<div class="col-12 col-md-3 text-center mb-5 mb-md-0">
+							<div class="bg-light p-2 mb-1">
+								<i class="fas fa-mobile-alt mobile-icon "></i>
+							</div>
+							<img class="img-fluid border border-dark rounded clearfix" src="assets/images/navbar-3-mobile.png">
+						</div>
+						<div class="col-12 col-md-9">
+							<img class="img-fluid" src="assets/images/navbar-3-desktop.png">
+						</div>
+					</div>
+				
+					<div class="row clearfix alert-dark p-3 rounded my-4 navbar-layout-row">
+						<div class="col-12"><p class="h4 mb-4 mt-3"><b>4. Double Row Navigation with Slider Menu</b></p></div>
+						<div class="col-12">
+							<img class="img-fluid img-thumbnail" src="assets/images/navbar-4.png">
+							<p>*Slider does not support Dropdown Menu Links</p>
+						</div>
+						<div class="col-12 col-md-3 text-center mb-5 mb-md-0">
+							<div class="bg-light p-2 mb-1">
+								<i class="fas fa-mobile-alt mobile-icon "></i>
+							</div>
+							<img class="img-fluid border border-dark rounded clearfix" src="assets/images/navbar-4-mobile.png">
+						</div>
+						<div class="col-12 col-md-9">
+							<img class="img-fluid" src="assets/images/navbar-3-desktop.png">
+						</div>
+					</div>
+		
+					<div class="row clearfix alert-dark p-3 rounded my-4 navbar-layout-row">
+						<div class="col-12"><p class="h4 mb-4 mt-3"><b>5. Double Row Navigation with Slider Menu and Centered Brand</b></p></div>
+						<div class="col-12">
+							<img class="img-fluid img-thumbnail" src="assets/images/navbar-5.png">
+							<p>*Slider does not support Dropdown Menu Links</p>
+						</div>
+						<div class="col-12 col-md-3 text-center mb-5 mb-md-0">
+							<div class="bg-light p-2 mb-1">
+								<i class="fas fa-mobile-alt mobile-icon "></i>
+							</div>
+							<img class="img-fluid border border-dark rounded clearfix" src="assets/images/navbar-5-mobile.png">
+						</div>
+						<div class="col-12 col-md-9">
+							<img class="img-fluid" src="assets/images/navbar-5-desktop.png">
+						</div>
+					</div>
+
+					<div class="row clearfix alert-dark p-3 rounded my-4 navbar-layout-row">
+						<div class="col-12"><p class="h4 mb-4 mt-3"><b>6. One Row Navigation with Slider Menu</b></p></div>
+						<div class="col-12">
+							<img class="img-fluid img-thumbnail" src="assets/images/navbar-6.png">
+							<p>*Slider does not support Dropdown Menu Links</p>
+						</div>
+						
+						<div class="col-12 col-md-3 text-center mb-5 mb-md-0">
+							<div class="bg-light p-2 mb-1">
+								<i class="fas fa-mobile-alt mobile-icon "></i>
+							</div>
+							<img class="img-fluid border border-dark rounded clearfix" src="assets/images/navbar-6-mobile.png">
+						</div>
+						<div class="col-12 col-md-9">
+							<img class="img-fluid" src="assets/images/navbar-6-desktop.png">
+						</div>
+					</div>		
+
+					<h5 class="mt-4"><b> - Top Navbar Color</b></h5>
+					<p class="ml-4">Change background color of the Navigation.</p>
+					
+					<h5 class="mt-4"><b> - Top Navbar Text Color</b></h5>
+					<p class="ml-4">Choose Color Template for the Navigation. Black or White text.</p>
+					
+					<h5 class="mt-4"><b> - Top Navbar Padding (Top/Bottom)</b></h5>
+					<p class="ml-4">Change top/bottom space of the Navigation.</p>
+					
+					<h5 class="mt-4"><b> - Top - Second Navbar Color</b></h5>
+					<p class="ml-4">This setting shows up when Double Row Navigations active. Change background color of the bottom row in Navigation.</p>
+					
+					<h5 class="mt-4"><b> - Top - Second Navbar Text Color</b></h5>
+					<p class="ml-4">This setting shows up when Double Row Navigations active. Choose Color Template for the bottom row in Navigation. Black or White text.</p>
+					
+					<h5 class="mt-4"><b> - Top - Second Navbar Padding (Top/Bottom)</b></h5>
+					<p class="ml-4">This setting shows up when Double Row Navigations active. Change top/bottom space of the bottom row in Navigation.</p>
+					
+					<h5 class="mt-4"><b> - Show Social icons</b></h5>
+					<p class="ml-4 alert-light my-4 p-3 border rounded">To see the icons you have to add your social media links from the <b>Customizer</b> -> <b>Social Media URLs</b> Section.</p>
+					<p class="ml-4">Show Social Media Icons in your Navigation.</p>
+					
+					<h5 class="mt-4"><b> - Social media icons with brand color</b></h5>
+					<p class="ml-4">Show Social Media Icons with their brand colors.</p>
+					<img class="img-fluid border border-dark rounded" src="assets/images/social-media-icons.png"><i class="fas fa-arrow-right mx-3 d-none d-md-inline"></i>
+					<img class="img-fluid border border-dark rounded" src="assets/images/social-media-icons-with-color.png" style="height:68px;">
+					
+					<h5 class="mt-4"><b> - Fixed Navbar</b></h5>
+					<p class="ml-4">Your Navigation will stick to the top, while you scroll up.</p>
+					
+				</div>
+				
+				<hr class="border-secondary">
+				
+				<div class="sub-content px-4">
+					<div class="row">
+						<div class="col-12 col-md-8">
+							<h3 id="header-settings" class="sub-section mt-4">3. Header</h3>
+							<h5 class="my-4"><b> - Header Layout</b></h5>
+							<p>You can choose color templates.</p>
+						</div>
+						<div class="col-12 col-md-4">
+							<img class="img-fluid border border-dark rounded w-50" src="assets/images/gradients.png">
+						</div>
+					</div>
+				</div>
+				
+				<hr class="border-secondary">
+				
+				<h3 id="content-settings" class="sub-section mt-4">4. Content</h3>
+				<div class="sub-content px-4">
+					<h5 class="mt-4"><b> - Full Width Content</b></h5>
+					<p class="ml-4">The full width content takes up the entire space on the page.</p>					
+					<div class="row">
+						<div class="col-12 col-md-5">
+							<img class="img-fluid border border-dark rounded w-100" src="assets/images/to-full-width-1.png">
+						</div>
+						<div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+							<i class="fas fa-arrow-down d-md-none display-3"></i>
+							<i class="fas fa-arrow-right d-none d-md-block display-3"></i>
+						</div>				
+						<div class="col-12 col-md-5">
+							<img class="img-fluid border border-dark rounded w-100" src="assets/images/to-full-width-2.png">
+						</div>
+					</div>
+					
+					<h5 class="mt-4"><b> - Activate Modules</b></h5>
+					<p class="ml-4">Divide content sections into modules. Remove main container background. Modules have own background and border.</p>
+					<div class="row">
+						<div class="col-12 col-md-5">
+							<img class="img-fluid border border-dark rounded w-100" src="assets/images/to-modular-1.png">
+						</div>
+						<div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+							<i class="fas fa-arrow-down d-md-none display-3"></i>
+							<i class="fas fa-arrow-right d-none d-md-block display-3"></i>
+						</div>				
+						<div class="col-12 col-md-5">
+							<img class="img-fluid border border-dark rounded w-100" src="assets/images/to-modular-2.png">
+						</div>
+					</div>
+					
+					<h5 class="mt-4"><b> - Site Content Margin Top (Responsive)</b></h5>
+					<p class="ml-4">Space between content and header.</p>
+					<div class="row">
+						<div class="col-md-4 border p-3">
+							<div class="d-flex align-items-center justify-content-center" style="height:80px">
+								<p>Applies only to desktop and larger sized devices.</p>
+							</div>
+							<img class="img-fluid border border-dark rounded" src="assets/images/margin-desktop.png">
+						</div>
+						<div class="col-md-4 border p-3">
+							<div class="d-flex align-items-center justify-content-center" style="height:80px">
+								<p>Applies only to tablet-sized devices.</p>
+							</div>
+							<img class="img-fluid border border-dark rounded" src="assets/images/margin-tablet.png">
+						</div>
+						<div class="col-md-4 border p-3">
+							<div class="d-flex align-items-center justify-content-center" style="height:80px">
+								<p>Applies only to phone-sized devices.</p>
+							</div>
+							<img class="img-fluid border border-dark rounded" src="assets/images/margin-mobile.png">
+						</div>
+					</div>
+					
+					<div class="alert-dark border rounded p-3 my-4">
+						<p class="mt-2"><b>To see the effect, switch device from the WordPress device navigation.</b></p>
+						<img class="img-fluid border border-dark rounded d-block" src="assets/images/device-navigation.png">					
+					</div>
+						
+					<h5 class="mt-4"><b> - Site Content Margin Bottom (Responsive)</b></h5>
+					<p class="ml-4">Space between content and footer.</p>
+					
+					<h5 class="mt-4"><b> - Posts Page Layout</b></h5>
+					<p class="ml-4">Select a content layout that will be applied to Blog posts(Latest Posts) page on your site.</p>					
+					
+					<h5 class="mt-4"><b> - 404 Page Layout</b></h5>
+					<p class="ml-4">Select a content layout that will be applied to the 404 error page on your site. <b>This page does not appear in the Customizer.</b></p>
+					
+					<h5 class="mt-4"><b> - Archive Page Layout</b></h5>
+					<p class="ml-4">Select a content layout that will be applied to category, tag and archive pages on your site.</p>
+					
+					<h5 class="mt-4"><b> - Default Page Layout</b></h5>
+					<p class="ml-4">Select a content layout that will be applied to the Default Template pages on your site.</p>
+					
+					<h5 class="mt-4"><b> - Single Blog Post Layout</b></h5>
+					<p class="ml-4">Select a content layout that will be applied to Single Blog Posts on your site.</p>
+				</div>
+				
+				<hr class="border-secondary">
+				
+				<h3 id="footer-settings" class="sub-section mt-4">5. Footer</h3>
+				<div class="sub-content px-4">
+					<h5 class="mt-4"><b> - Footer Copyright Text</b></h5>
+					<h5 class="mt-4"><b> - Hide Brand in footer.</b></h5>
+					<h5 class="mt-4"><b> - Footer Background Color</b></h5>
+					<h5 class="mt-4"><b> - Footer Text Color</b></h5>
+				</div>
+			</div>
+		</div><!-- Customize Control .content -->
+		
+		<h1 id="create-lyrics" class="bg-dark p-3 text-left mt-5 border-bottom" style="font-weight:300;">
+			Creating Lyrics
+		</h1>
+		<p class="my-4">Don't forget to create <b>Artist</b> and <b>Album</b> before creating lyrics. You'll need to select them when you create lyrics.</p>
+		<div class="content px-2">
+			<h5 class="my-4"><b> - Create Artist</b></h5>
+			<ul>
+				<li>From your WordPress Admin menu go <b>Artists -> Add New.</b></li>
+				<li>Add title to be the name of the Artist.</li>
+				<li>You can fill out some forms that give information about the artist in <b>About Artist</b> section.</li>
+				<li>Select related genres of artist from the <b>Genres</b> Section in the editor sidebar.</li>
+				<li>Select <b>Tags</b> wisely for show related Artists in single artist page. It allows users to discover similar artists.</li>
+				<li>Choose Thumbnail Image of the Artist.</li>
+				<li>Publish it.</li>
+			</ul>
+			<p>*You can add extra content to the top of the Artist page using the <b>Gutenberg/Classic Content Area</b>.</p>
+			<p class="ml-4"></p>
+			
+			<h5 class="my-4"><b> - Create Album</b></h5>
+			<ul>
+				<li>From your WordPress Admin menu go <b>Albums -> Add New</b></li>
+				<li>Add title to be the name of the Album.</li>
+				<li>Select <b>Primary Artist</b> from the <b>About Album</b> section.</li>
+				<li>Select related genres of album from the <b>Genres</b> Section in the editor sidebar.</li>
+				<li>Select <b>Tags</b> wisely for show related Albums in single album page. It allows users to discover similar albums.</li>
+				<li>Choose Thumbnail Image of the Album.</li>
+				<li>Publish it.</li>
+			</ul>
+			<p>*You can add extra content to the top of the Album page using the <b>Gutenberg/Classic Content Area</b>.</p>
+			<h5 class="my-4"><b> - Create Lyrics</b></h5>
+			<ul>
+				<li>From your WordPress Admin menu go <b>Lyrics -> Add New</b></li>
+				<li>Add title to be the name of the Song.</li>
+				<li>Add Lyrics in Editor area.</li>
+				<li>Select <b>Primary Artist</b>, <b>Other Artists</b>(if exists) and <b>Album</b> from the <b>About Lyrics</b> section.</li>
+				<li>Select related genres of the Lyrics from the <b>Genres</b> Section in the editor sidebar.</li>
+				<li>Select <b>Tags</b> wisely for show related Lyrics in single lyrics page(Genres also affects it). It allows users to discover similar Lyrics/Songs.</li>
+				<li>You can fill out some forms(Details, Links) that give information about the lyrics/song in <b>About Lyrics</b> section.</li>
+				<li>Publish it.</li>
+			</ul>
+			<img class="img-fluid border border-dark rounded w-100" src="assets/images/create-lyrics.png">
+		</div>
+
+		<h1 id="create-playlist" class="bg-dark p-3 text-left mt-5 border-bottom" style="font-weight:300;">
+			Creating Playlist
+		</h1>
+		<div class="content px-2">
+			<ul class="my-4">
+				<li>From your WordPress Admin menu go <b>Playlists -> Add New</b></li>
+				<li>Add title to be the name of the Playlist.</li>
+				<li>Add Playlist items in Editor area.</li>
+				<li>Select related genres of the Playlist from the <b>Genres</b> Section in the editor sidebar.</li>
+				<li>Select <b>Tags</b> wisely for show related Playlists in single Playlist page(Genres also affects it). It allows users to discover similar Playlists.</li>
+				<li>Publish it.</li>
+			</ul>
+			
+			<h5 class="my-4"><b>Adding Playlist Items with Custom Gutenberg Block</b></h5>
+			<p><b>Playlist Item</b> block supports schema.org</p>
+			
+			<p class="my-4">
+			<span class="order badge badge-pill badge-light">1</span>
+			In Gutenber Editor click on the Add Block button and select <b>Common Blocks</b> > <b>Playlist Item</b>.
+			</p>
+			<img class="img-fluid img-thumbnail w-75" src="assets/images/playlist-item.png">
+			
+			
+			<p class="my-4">
+			<span class="order badge badge-pill badge-light">2</span>
+			Click on <b>Playlist Item</b> button from right-top of the block to trigger the block.
+			</p>
+			<p class="my-4">
+			<span class="order badge badge-pill badge-light">3</span>
+			Block fields will appear right side of the editor.
+			</p>
+			<img class="img-fluid img-thumbnail w-75" src="assets/images/playlist-item-2.png">
+			<p class="my-4">
+			<span class="order badge badge-pill badge-light">4</span>
+			You can also add <b>button</b>, <b>description</b> or <b>embed</b> inside the playlist item block by click on Plus button inside the block.
+			</p>
+		</div>
+		<h1 id="lyrico-posts-widget" class="bg-dark p-3 text-left mt-5 border-bottom" style="font-weight:300;">
+			Widget: Lyrico Posts
+		</h1>
+		<div class="content px-2 my-4">
+			<div class="row align-items-center">
+				<div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
+					<p class="mt-4">Add Lyrico Posts Widget to your sidebar from your WordPress Admin menu go <b>Appearance -> Widgets.</b></p>
+					<p>In <b>Available Widgets</b> section the *<b>Lyrico Posts</b> Widget will be on the top. Drag and drop widgets to the place you want to add.</p>
+				</div>
+				<div class="col-md-6 d-flex align-items-center justify-content-center">
+					<img class="img-fluid mb-4 img-thumbnail" src="assets/images/widget-preview.png">
+				</div>
+			</div>
+		</div>
+
+
+		<div class="content p-2">
+			<h3 class="sub-section my-4">Widget Styles</h3>
+		</div>
+		<div class="content px-0">
+			<div class="row no-gutters">
+				<div class="col-md-4 border p-3">
+					<div class="d-flex align-items-center justify-content-center" style="height:80px">
+						<h4>Box With Image</h4>
+					</div>
+					<img class="img-fluid border border-dark rounded" src="assets/images/widget-box-with-image.png">
+				</div>
+				<div class="col-md-4 border p-3">
+					<div class="d-flex align-items-center justify-content-center" style="height:80px">
+						<h4>Box With Ordering</h4>
+					</div>
+					<img class="img-fluid border border-dark rounded" src="assets/images/widget-ordered-box.png">
+				</div>
+				<div class="col-md-4 border p-3">
+					<div class="d-flex align-items-center justify-content-center" style="height:80px">
+						<h4>Box With Only Text</h4>
+					</div>
+					<img class="img-fluid border border-dark rounded" src="assets/images/widget-box-with-only-text.png">
+				</div>
+				<div class="col-md-4 border p-3">
+					<div class="d-flex align-items-center justify-content-center" style="height:80px">
+						<h4>Card</h4>
+					</div>
+					<img class="img-fluid border border-dark rounded" src="assets/images/widget-card.png">
+				</div>
+				<div class="col-md-4 border p-3">
+					<div class="d-flex align-items-center justify-content-center" style="height:80px">
+						<h4>Simple List</h4>
+					</div>
+					<img class="img-fluid border border-dark rounded" src="assets/images/widget-simple-list.png">
+				</div>
+				<div class="col-md-4 border p-3">
+					<div class="d-flex align-items-center justify-content-center" style="height:80px">
+						<h4>Simple List(Ordered)</h4>
+					</div>
+					<img class="img-fluid border border-dark rounded" src="assets/images/widget-simple-ordered-list.png">
+				</div>
+			</div>
+		</div>
+
+		<h1 id="google-fonts" class="bg-dark p-3 text-left mt-5 border-bottom" style="font-weight:300;">
+			Google Fonts
+		</h1>
+		<div class="content px-2 my-4">
+			<div class="row align-items-center">
+				<div class="col-md-6 d-flex align-items-center justify-content-center text-center">
+					<p>You can select a custom font family from 19 Google Fonts from <b>Customizer -> Google Fonts</b>. If you don't activate Google font Lyrico uses uses Bootstrap 4 default font family which is also good.</p>
+				</div>
+				<div class="col-md-6 d-flex align-items-center justify-content-center">
+					<img class="img-fluid mb-4 img-thumbnail" src="assets/images/google-fonts.png">
+				</div>
+			</div>
+		</div>
+
+		<h1 id="source-credits" class="bg-dark p-3 text-left mt-5 border-bottom" style="font-weight:300;">
+			Sources and Credits
+		</h1>
+		<div class="content px-2">
+			<h2 id="settings-based-on-the-template" class="mt-5 mb-3">CSS and Fonts</h2>
+			<ul>
+				<li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+				<li><a href="https://fontawesome.com/" target="_blank">Font Awesome Free</a></li>
+				<li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+			</ul>
+			
+			<h2 id="settings-based-on-the-template" class="mt-5 mb-3">Javascript</h2>
+			<ul>
+				<li><a href="https://jquery.com/" target="_blank">JQuery</a></li>
+				<li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+				<li><a href="https://popper.js.org/" target="_blank">Popper.js</a></li>
+				<li><a href="https://select2.org/" target="_blank">Select2</a></li>
+				<li><a href="https://swiperjs.com/" target="_blank">Swiper</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            var colors = ['midnight', 'vine', 'red', 'moonlit', 'influ', 'army', 'lawrence', 'dark-ocean'];
+            $("body").addClass(colors[Math.floor(Math.random() * colors.length)]);
+        });
+
+    </script>
+</body>
+
+</html>
