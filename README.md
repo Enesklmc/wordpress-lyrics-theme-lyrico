@@ -1,4 +1,9 @@
 # wordpress-lyrics-theme-lyrico
+This theme is created from scratch by me while learning and self developing, it's totally free. 
+
+***
+## Documentation
+***
 Full Version Wordpress Theme
 
 1. Login to your WordPress dashboard(wp-admin).
